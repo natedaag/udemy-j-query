@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery-4</title>
+	<script type="text/javascript" src="jquery.min.js"></script>	
+	<style type="text/css">
+		#hiddenText{
+			display:none;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<p id="text">visible text</p>
+		<button id="toggle">toggle!</button>			
+				<script type="text/javascript">
+					var textShowing = true;
+					$("#toggle").click(function(){
+						if(textShowing){
+							$("#text").fadeOut(function(){
+								textShowing = false;
+							});
+						} else {
+							$("#text").fadeIn(function(){	
+								textShowing = true;
+						});
+					}
+				});
+				/* does what the two below do, with one button.
+				$("#toggle").click(function() {
+					if($("#text").css("display") == "none") {
+						$("#text").fadeIn();
+					} else {
+						$("#text").fadeOut();
+					}
+				}); */
+				
+				/*  creates two buttons, to do what is done above. 
+				$("#fadeOut").click(function() {
+					$("#text").fadeOut();
+				});
+				$("#fadeIn").click(function() {
+					$("#hiddenText").fadeIn();
+				}); */
+ 		</script>
+	</body>
+</html>

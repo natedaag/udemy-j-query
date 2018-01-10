@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery-5</title>
+	<script type="text/javascript" src="jquery.min.js"></script>	
+	<style type="text/css">
+		#circle{
+			height:200px;
+			width:200px;
+			border-radius:50%;
+			background-color:green;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<div id="circle"></div>
+		<script>
+			$("#circle").click(function(){
+				$(this).animate({
+					width:"400px", 
+					height:"400px",
+					marginLeft:"100px",
+					marginTop:"100px",
+					borderRadius:0
+				}, 2000, function() {
+					$(this).css("background-color", "red");
+				});
+			});
+ 		</script>
+	</body>
+</html>

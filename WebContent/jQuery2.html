@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery-2</title>
+		<style type="text/css">
+			#circle{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+		</style>
+	<script type="text/javascript" src="jquery.min.js"> 
+	<!-- or in the real world, link to google at 
+		 (<script src="">https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js<closeScript>) -->
+	</script>
+	
+	</head>
+	
+	<body>
+		<div id="circle"></div>
+		<iframe src="jquery-1.html"></iframe>		
+		<script type="text/javascript">
+		 	$("#circle").hover(function(){
+				$("iframe").attr("src", "http://www.cnn.com");
+			})  
+			/* $("#circle").click(function() {
+				$("p").html("Changed text");
+			}) */
+			/*	$("#circle").click(function() {
+				alert($("p").html());
+			}) */
+ 		
+ 		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery</title>
+		<style type="text/css">
+			#circle{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+			.square{
+				height:200px;
+				width:200px;
+				background-color:red;
+				margin:10px;
+			}
+		</style>
+	<script type="text/javascript" src="jquery.min.js"> 
+	<!-- or in the real world, link to google at 
+		 (<script src="">https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js<closeScript>) -->
+	</script>
+	
+	</head>
+	
+	<body>
+		<div id="circle"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		
+		<script type="text/javascript">
+			$("#circle").click(function() {
+				alert("circle was clicked");
+			})
+			$(".square").click(function() {
+				alert("square was clicked");
+			})
+			/* 	$("div").click(function() {
+				alert("something was clicked");
+			})  */
+ 		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery-3</title>
+		<style type="text/css">
+			#circle{
+				width:200px;
+				height:200px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+			.square{
+				width:200px;
+				height:200px;
+				background-color:red;
+				margin:10px;
+			}
+		</style>
+	<script type="text/javascript" src="jquery.min.js"> 
+	
+	</script>
+	
+	</head>
+	
+	<body>
+		<div id="circle"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+			
+		<script type="text/javascript">
+		$("div").click(function() {
+			if ($(this).attr("id") == "circle"){
+			alert("you clicked circle");
+			} else {
+				alert("you clicked square")
+			}
+			/* $(this).css("display","none"); selects only element that's been clicked. */
+			/* alert($("body").css("width")); one value in () returns actual*/
+			/* $("#circle").css("width", "400px"); two values in () changes */
+		});
+ 		</script>
+	</body>
+</html>
