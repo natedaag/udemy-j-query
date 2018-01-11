@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>jQuery U I</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>	
+	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+	<style type="text/css">
+		  .draggable { 
+		  	width: 90px; 
+		  	height: 90px; 
+		  	padding: 0.5em; 
+		  	float: left; 
+		  	margin: 0 10px 10px 0; 
+		  }
+		  #draggable, #draggable2 { 
+		  	margin-bottom:20px; 
+		  }
+		  #draggable { 
+		  	cursor: n-resize; 
+		  }
+		  #draggable2 { 
+		  	cursor: e-resize; 
+		  }
+		  #containment-wrapper { 
+		  	width: 95%; 
+		  	height:150px; 
+		  	border:2px solid #ccc; 
+		  	padding: 10px; 
+		  }
+		  h3 { 
+		  	clear: left; 
+		  }
+	</style>
+	</head>
+	
+	<body> 
+		<div id="draggable" class="draggable ui-widget-content">
+		  <p>I can be dragged only vertically</p>
+		</div>
+		<div style="width:400px;height:300px;background-color:yellow;">
+		<p>stuck</p>
+		</div>
+		 
+		<div id="draggable2" class="draggable ui-widget-content">
+		  <p id="box">I can be dragged only horizontally</p>
+		</div>
+		 
+		<h3>Or to within another DOM element:</h3>
+		<div id="containment-wrapper">
+		  <div id="draggable3" class="draggable ui-widget-content">
+		    <p>I'm contained within the box</p>
+		  </div>
+		 
+		  <div class="draggable ui-widget-content">
+		    <p id="draggable4" class="ui-widget-header">I'm contained within my parent</p>
+		  </div>
+		</div>  		
+		<p>Drag me around</p>
+		<script type="text/javascript">
+	    $( "#draggable" ).draggable({ axis: "y" });/* vertical */
+	    $( "#draggable2" ).draggable({ axis: "x" });/* horizontal */
+	 
+	    $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+	    $( "#draggable4" ).draggable({ containment: "parent" });
+		
+		/* 
+		
+		*/
+ 		</script>
+	</body>
+</html>
+</html>
